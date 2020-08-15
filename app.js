@@ -79,7 +79,11 @@ const sectionCenter = document.querySelector(".section-center");
 
 window.addEventListener("DOMContentLoaded", function () {
   //   console.log("Shake and bake");
-  let displayMenu = menu.map(function (item) {
+  displayMenuItems(menu);
+});
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
     // console.log(item);
     // return item;
     // return `<h1>${item.title}</h1>`;
@@ -99,4 +103,4 @@ window.addEventListener("DOMContentLoaded", function () {
   displayMenu = displayMenu.join("");
   //   console.log(displayMenu);
   sectionCenter.innerHTML = displayMenu;
-});
+}
