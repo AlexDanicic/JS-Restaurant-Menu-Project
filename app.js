@@ -72,6 +72,14 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 
 // initial setup
@@ -83,6 +91,11 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 window.addEventListener("DOMContentLoaded", function () {
   //   console.log("Shake and bake");
   displayMenuItems(menu);
+
+  const categories = menu.map(function (item) {
+    return item.category;
+  });
+  console.log(categories);
 });
 
 // Filter Items
